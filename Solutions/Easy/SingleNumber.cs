@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualBasic;
-
-namespace LeetCode.Solutions.Easy
+﻿namespace LeetCode.Solutions.Easy
 {
     public static class SingleNumber
     {
@@ -12,7 +10,7 @@ namespace LeetCode.Solutions.Easy
         public static int SolutionA(int[] nums)
         {
             var result = 0;
-            foreach(var num in nums)
+            foreach (var num in nums)
             {
                 result ^= num;
             }
@@ -27,7 +25,7 @@ namespace LeetCode.Solutions.Easy
         public static int SolutionB(int[] nums)
         {
             var hashSet = new HashSet<int>();
-            for(var i = 0; i < nums.Length; i++)
+            for (var i = 0; i < nums.Length; i++)
             {
                 if (hashSet.Contains(nums[i]))
                 {
