@@ -1,4 +1,4 @@
-﻿namespace Solutions.Easy
+﻿namespace LeetCode.Solutions.Easy
 {
     public static class FindNearestPointThatHasTheSameXOrYCoordinate
     {

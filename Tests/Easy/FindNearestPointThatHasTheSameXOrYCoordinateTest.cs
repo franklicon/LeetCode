@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Solutions.Easy;
+using LeetCode.Solutions.Easy;
 
-namespace Tests.Easy
+namespace LeetCode.Tests.Easy
 {
     [TestClass]
     public class FindNearestPointThatHasTheSameXOrYCoordinateTest
