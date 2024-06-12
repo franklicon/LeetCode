@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using LeetCode.Solutions.Medium;
-using System;
 
 namespace LeetCode.Tests.Medium
 {
