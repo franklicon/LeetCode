@@ -12,7 +12,6 @@
             {
                 if (people[left] + people[right] <= limit)
                 {
-  
                     left++;
                     right--;
                 }
