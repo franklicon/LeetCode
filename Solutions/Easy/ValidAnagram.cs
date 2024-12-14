@@ -28,8 +28,8 @@
 
         public static bool SolutionB(string s, string t)
         {
-            var sortedS = String.Concat(s.OrderBy(c => c));
-            var sortedT = String.Concat(t.OrderBy(c => c));
+            var sortedS = string.Concat(s.OrderBy(c => c));
+            var sortedT = string.Concat(t.OrderBy(c => c));
             return sortedS == sortedT;
         }
     }

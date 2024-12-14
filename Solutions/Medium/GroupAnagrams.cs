@@ -8,7 +8,7 @@
             
             foreach(var s in strs)
             {
-                var sortedS = String.Concat(s.OrderBy(c => c));
+                var sortedS = string.Concat(s.OrderBy(c => c));
                 if (dic.ContainsKey(sortedS))
                 {
                     dic[sortedS].Add(s);
