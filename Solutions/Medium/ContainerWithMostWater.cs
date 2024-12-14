@@ -4,25 +4,20 @@
     {
         public static int Solution(int[] height)
         {
-            var a = 0;
-            var b = height.Length - 1;
             var maxArea = 0;
-            while (a < b)
+            var left = 0;
+            var right = height.Length - 1;
+            while (left < right)
             {
-                var area = Math.Min(height[a], height[b]) * (b - a);
-                if (area > maxArea)
-                {
-                    maxArea = area;
-                }
-                if(height[a] < height[b])
-                {
-                    a++;
-                }
+                var currentArea = Math.Min(height[left], height[right]) * (right - left);
+                maxArea = Math.Max(maxArea, currentArea);
+                
+                if (height[left] < height[right])
+                    left++;
                 else
-                {
-                    b--;
-                }
+                    right--;
             }
+
             return maxArea;
         }
     }
