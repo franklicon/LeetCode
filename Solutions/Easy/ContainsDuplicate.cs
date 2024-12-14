@@ -7,13 +7,9 @@
             var hashSet = new HashSet<int>();
             foreach (var num in nums)
             {
-                if (hashSet.Contains(num))
+                if (!hashSet.Add(num))
                 {
                     return true;
-                }
-                else
-                {
-                    hashSet.Add(num);
                 }
             }
             return false;
