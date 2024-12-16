@@ -12,13 +12,12 @@ namespace LeetCode.Tests.Easy
             // Arrange 
             var s = "anagram";
             var t = "nagaram";
-            var expectedResult = true;
 
             // Act
-            var actualResult = ValidAnagram.SolutionA(s, t);
+            var result = ValidAnagram.SolutionA(s, t);
 
             // Assert
-            Assert.AreEqual(expectedResult, actualResult);
+            Assert.IsTrue(result);
         }
 
         [TestMethod]
@@ -27,13 +26,12 @@ namespace LeetCode.Tests.Easy
             // Arrange 
             var s = "ab";
             var t = "a";
-            var expectedResult = false;
 
             // Act
-            var actualResult = ValidAnagram.SolutionA(s, t);
+            var result = ValidAnagram.SolutionA(s, t);
 
             // Assert
-            Assert.AreEqual(expectedResult, actualResult);
+            Assert.IsFalse(result);
         }
 
         [TestMethod]
@@ -42,13 +40,12 @@ namespace LeetCode.Tests.Easy
             // Arrange 
             var s = "anagram";
             var t = "nagaram";
-            var expectedResult = true;
 
             // Act
-            var actualResult = ValidAnagram.SolutionB(s, t);
+            var result = ValidAnagram.SolutionB(s, t);
 
             // Assert
-            Assert.AreEqual(expectedResult, actualResult);
+            Assert.IsTrue(result);
         }
 
         [TestMethod]
@@ -57,13 +54,12 @@ namespace LeetCode.Tests.Easy
             // Arrange 
             var s = "ab";
             var t = "a";
-            var expectedResult = false;
 
             // Act
-            var actualResult = ValidAnagram.SolutionB(s, t);
+            var result = ValidAnagram.SolutionB(s, t);
 
             // Assert
-            Assert.AreEqual(expectedResult, actualResult);
+            Assert.IsFalse(result);
         }
     }
 }
