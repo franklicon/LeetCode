@@ -4,23 +4,22 @@
     {   
         public static int Solution(int[] people, int limit)
         {
-            Array.Sort(people);
+            var boats = 0;
             var left = 0;
             var right = people.Length - 1;
-            var boats = 0;
+            Array.Sort(people);
+
             while (left <= right)
             {
                 if (people[left] + people[right] <= limit)
                 {
                     left++;
-                    right--;
                 }
-                else
-                {
-                    right--;
-                }
+                
+                right--;
                 boats++;
             }
+            
             return boats;
         }
     }
