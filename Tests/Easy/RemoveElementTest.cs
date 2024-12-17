@@ -19,6 +19,5 @@ namespace LeetCode.Tests.Easy
             // Assert
             Assert.AreEqual(expectedNums, actualNums);
         }
-
     }
 }
