@@ -14,10 +14,10 @@ namespace LeetCode.Tests.Medium
             var expectedResult = new int[] { 24, 12, 8, 6 };
 
             // Act
-            var actualResult = ProductOfArrayExceptSelf.SolutionA(nums);
+            var result = ProductOfArrayExceptSelf.SolutionA(nums);
 
             // Assert
-            CollectionAssert.AreEqual(expectedResult, actualResult);
+            CollectionAssert.AreEqual(expectedResult, result);
         }
 
         [TestMethod]
@@ -28,10 +28,10 @@ namespace LeetCode.Tests.Medium
             var expectedResult = new int[] { 60, 40, 30, 24 };
 
             // Act
-            var actualResult = ProductOfArrayExceptSelf.SolutionB(nums);
+            var result = ProductOfArrayExceptSelf.SolutionB(nums);
 
             // Assert
-            CollectionAssert.AreEqual(expectedResult, actualResult);
+            CollectionAssert.AreEqual(expectedResult, result);
         }
     }
 }
