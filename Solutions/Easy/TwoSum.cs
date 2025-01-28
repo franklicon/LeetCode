@@ -11,17 +11,15 @@
             {
                 var num = target - nums[i];
 
-                if (numsDictionary.ContainsKey(num))
+                if (numsDictionary.TryGetValue(num, out var value))
                 {
-                    return new int[] { i, numsDictionary[num] };
+                    return [i, value];
                 }
-                else
-                {
-                    numsDictionary.TryAdd(nums[i], i);
-                }
+
+                numsDictionary.TryAdd(nums[i], i);
             }
 
-            return Array.Empty<int>();
+            return [];
         }
     }
 }
