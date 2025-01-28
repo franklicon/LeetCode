@@ -8,43 +8,38 @@
             var node = headNode;
             while (list1 != null && list2 != null)
             {
-                if (list1.val < list2.val)
+                if (list1.Val < list2.Val)
                 {
-                    node.next = list1;
-                    list1 = list1.next;
+                    node.Next = list1;
+                    list1 = list1.Next;
                 }
                 else
                 {
-                    node.next = list2;
-                    list2 = list2.next;
+                    node.Next = list2;
+                    list2 = list2.Next;
                 }
-                node = node.next;
+                node = node.Next;
             }
             while (list1 != null)
             {
-                node.next = list1;
-                list1 = list1.next;
-                node = node.next;
+                node.Next = list1;
+                list1 = list1.Next;
+                node = node.Next;
             }
             while (list2 != null)
             {
-                node.next = list2;
-                list2 = list2.next;
-                node = node.next;
+                node.Next = list2;
+                list2 = list2.Next;
+                node = node.Next;
             }
 
-            return headNode.next;
+            return headNode.Next;
         }
     }
 
-    public class ListNode
+    public class ListNode(int val = 0, ListNode? next = null)
     {
-        public int val;
-        public ListNode? next;
-        public ListNode(int val = 0, ListNode? next = null)
-        {
-            this.val = val;
-            this.next = next;
-        }
+        public readonly int Val = val;
+        public ListNode? Next = next;
     }
 }
