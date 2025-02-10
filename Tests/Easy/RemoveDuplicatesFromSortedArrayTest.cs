@@ -11,13 +11,12 @@ namespace LeetCode.Tests.Easy
         {
             // Arrange 
             var nums = new int[] { 1, 1, 2, 2, 3, 4, 4, 4, 5 };
-            var expectedResult = 5;
 
             // Act
             var actualResult = RemoveDuplicatesFromSortedArray.Solution(nums);
 
             // Assert
-            Assert.AreEqual(expectedResult, actualResult);
+            Assert.AreEqual(5, actualResult);
         }
 
         [TestMethod]
@@ -25,13 +24,38 @@ namespace LeetCode.Tests.Easy
         {
             // Arrange 
             var nums = new int[] { 1, 2 };
-            var expectedResult = 2;
 
             // Act
             var actualResult = RemoveDuplicatesFromSortedArray.Solution(nums);
 
             // Assert
-            Assert.AreEqual(expectedResult, actualResult);
+            Assert.AreEqual(2, actualResult);
+        }
+        
+        [TestMethod]
+        public void Test03()
+        {
+            // Arrange 
+            var nums = new int[] { 1, 1, 2, 2, 3, 4, 4, 4, 5 };
+
+            // Act
+            var actualResult = RemoveDuplicatesFromSortedArray.SolutionB(nums);
+
+            // Assert
+            Assert.AreEqual(5, actualResult);
+        }
+
+        [TestMethod]
+        public void Test04()
+        {
+            // Arrange 
+            var nums = new int[] { 1, 2 };
+
+            // Act
+            var actualResult = RemoveDuplicatesFromSortedArray.SolutionB(nums);
+
+            // Assert
+            Assert.AreEqual(2, actualResult);
         }
     }
 }

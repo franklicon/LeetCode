@@ -17,6 +17,25 @@
             }
             return indexOfInsertion;
         }
+
+        public static int SolutionB(int[] nums)
+        {
+            if(nums.Length == 1)
+                return 1;
+
+            var k = 0;
+            for(var i = 1; i < nums.Length; i++)
+            {
+                while(i < nums.Length && nums[i] == nums[k])
+                {
+                    i++;
+                }
+                if(i < nums.Length && nums[k] != nums[i])
+                    nums[++k] = nums[i];
+            }
+        
+            return k+1;
+        }
     }
 }
 
