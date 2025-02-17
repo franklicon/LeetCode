@@ -4,23 +4,21 @@
     {
         public static int[] SolutionA(int[] nums)
         {
-            var n = nums.Length - 1;
-            var prefix = 1;
-            var postfix = 1;
-            var result = new int[n + 1];
-
-            for(var i = 0; i <= n; i++)
+            var result = new int[nums.Length];
+            var aux = 1;
+            for(var i = 0; i < nums.Length; i++)
             {
-                result[i] = prefix;
-                prefix *= nums[i];
+                result[i] = aux;
+                aux *= nums[i];
             }
-
-            for(var i = n; i >= 0; i--)
+            
+            aux = 1;
+            for(var i = nums.Length - 1; i >= 0; i--)
             {
-                result[i] *= postfix;
-                postfix *= nums[i];
+                result[i] *= aux;
+                aux *= nums[i];
             }
-
+            
             return result;
         }
 
